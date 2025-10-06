@@ -13,4 +13,3 @@
 
 This project saves its settings to `settings.json` in the script folder.
 
-
