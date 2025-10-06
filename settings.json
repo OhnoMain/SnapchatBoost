@@ -1,0 +1,10 @@
+{
+  "loop_delay": 0.2,
+  "click_delay": 0.29,
+  "position_delay": 0.5,
+  "shortcut_count": 1,
+  "positions": {},
+  "auto_open_readme": true,
+  "readme_url": "https://github.com/OhnoMain/SnapchatBoost/blob/main/readme.md",
+  "snapchat_login": "https://web.snapchat.com/"
+}
