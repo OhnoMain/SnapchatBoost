@@ -2,7 +2,6 @@
 
 **SnapchatBoost** - educational helper for Snapchat Web.
 
-![Snapscore 100000](snapscore_100k.png)
 
 ## Quickstart
 
