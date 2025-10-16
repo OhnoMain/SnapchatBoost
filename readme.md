@@ -1,6 +1,6 @@
 # 👻 SnapchatBoost
 
-![SnapchatBoost Banner](https://raw.githubusercontent.com/OhnoMain/SnapchatBoost/main/assets/banner.png)
+![snap1](https://github.com/user-attachments/assets/e632e18e-586d-48e4-b535-a830b5ac1405)
 
 > ⚡ Automate Snapchat snap sending via **web.snapchat.com** using Python + GUI automation.  
 > Created by **ohno**, for educational and productivity testing — **anonymous mode** edition.
