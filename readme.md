@@ -1,4 +1,4 @@
-# 👻 SnapchatBoost (Anonymous Mode)
+# 👻 SnapchatBoost
 
 ![SnapchatBoost Banner](https://raw.githubusercontent.com/OhnoMain/SnapchatBoost/main/assets/banner.png)
 
