@@ -38,10 +38,22 @@ This version includes:
 
 ### 🪟 Windows
 
+**Easy installation (reccomended):**
+- Press the green '**code**' button and click '**download zip**'
+- Once it has downloaded **unzip** the file
+- Double click the **install.bat** and wait until everything thing is installed
+- You should see the display banner 
+
 1. **Install Python (3.8 or newer):**
    - Download from [python.org/downloads](https://www.python.org/downloads/)
+   - Or Download from the microsoft app store 
    - During install, check ✅ **“Add Python to PATH”**
 
 2. **Open Command Prompt** and install dependencies:
-   ```bash
+   - Install pip by running
+   ``` bash
+   python3.10 -m ensurepip --default-pip
+   ```
+   and then running
+   ``` bash
    pip install pyautogui keyboard colorama
