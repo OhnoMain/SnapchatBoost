@@ -1,59 +1,109 @@
-# 👻 SnapchatBoost
+# 👻 **SnapchatBoost**
 
-![snap1](https://github.com/user-attachments/assets/e632e18e-586d-48e4-b535-a830b5ac1405)
+![SnapchatBoost Banner](https://github.com/user-attachments/assets/e632e18e-586d-48e4-b535-a830b5ac1405)
 
-> ⚡ Automate Snapchat snap sending via **web.snapchat.com** using Python + GUI automation.  
-> Created by **ohno**, for educational and productivity testing — **anonymous mode** edition.
-
----
-
-## 🧠 Overview
-
-`SnapchatBoost` is a desktop-based automation tool that interacts with **Snapchat Web** to automate repetitive snap-sending actions.  
-It works by using `pyautogui` and `keyboard` to control the mouse and keyboard, simulating real interactions with the Snapchat interface.
-
-This version includes:
-- A **terminal interface with color animations**
-- **ASCII startup banner and boot sequence**
-- Configurable **delays, shortcut counts**, and **position mapping**
-- **Time estimation** for automation batches
-- Cross-platform support (Windows, macOS, Linux)
+> **Automate Snapchat snap sending on `web.snapchat.com`** — **fast, simple, and fully anonymous**.  
+> Built with **Python + GUI automation** (`pyautogui`) for educational and productivity testing.  
+> Created by **Ohno** — **Anonymous Mode Edition**
 
 ---
 
-## 🚀 Features
+## 🌟 **What It Does**
+
+`SnapchatBoost` lets you **send hundreds of snaps in seconds** using **Snapchat Web** — no app, no phone, no limits.
+
+It simulates real clicks and movements on your screen to:
+- Open camera
+- Select your shortcut
+- Hit **“Send To”** → **Select All** → **Send**
+
+Perfect for **testing**, **boosting streaks**, or **productivity experiments**.
+
+---
+
+## ⚡ **Features**
 
 | Feature | Description |
-|----------|--------------|
-| 🖱️ Mouse Position Mapping | Configure exact on-screen coordinates for all buttons (Camera, Send To, Shortcut, etc.) |
-| ⚙️ Configurable Settings | Tune click and loop delays, shortcut size, etc. |
-| ⏱️ Time Estimator | Calculate total run time for large snap batches |
-| 💬 Pretty Console Output | Smooth typing animation with color-coded text |
-| 🌍 Cross-Platform | Works on Windows, macOS, and Linux |
-| 💡 Auto Help | Opens the GitHub README and Snapchat Web for convenience |
+|--------|-------------|
+| **Mouse Position Mapping** | Point & press `Y` to save button locations |
+| **Custom Delays** | Fine-tune speed to avoid detection |
+| **Shortcut Support** | Send to **1–100+ friends at once** |
+| **Time Estimator** | Know exactly how long 10K snaps will take |
+| **Colorful Terminal UI** | Smooth animations + ASCII boot sequence |
+| **Auto-Help** | Opens README + Snapchat Web on first run |
+| **Cross-Platform** | Works on **Windows**, **macOS**, **Linux** |
 
 ---
 
-## 📦 Installation
+## 🚀 **Installation (Super Simple)**
 
-### 🪟 Windows
+> **No coding required** — just **download, run, and go!**
 
-**Easy installation (reccomended):**
-- Press the green '**code**' button and click '**download zip**'
-- Once it has downloaded **unzip** the file
-- Double click the **install.bat** and wait until everything thing is installed
-- You should see the display banner 
+### **Windows (Easiest)**
 
-1. **Install Python (3.8 or newer):**
-   - Download from [python.org/downloads](https://www.python.org/downloads/)
-   - Or Download from the microsoft app store 
-   - During install, check ✅ **“Add Python to PATH”**
+1. **Download the ZIP**  
+   → Click the green **"Code"** button → **"Download ZIP"**
 
-2. **Open Command Prompt** and install dependencies:
-   - Install pip by running
-   ``` bash
-   python3.10 -m ensurepip --default-pip
-   ```
-   and then running
-   ``` bash
-   pip install pyautogui keyboard colorama
+2. **Extract the folder**
+
+3. **Double-click `install.bat`**  
+   → It installs **Python dependencies** automatically
+
+4. **Run `start.bat`** to launch SnapchatBoost
+
+> **Done!** The banner appears → you're ready.
+
+---
+
+### **macOS**
+
+```bash
+# 1. Install Homebrew (if you don't have it)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Install Python
+brew install python
+
+# 3. Download & extract the ZIP from GitHub
+
+# 4. Open Terminal in the folder and run:
+pip install pyautogui keyboard colorama
+
+# 5. Launch
+python3 main.py
+
+```
+### **Linux**
+```bash
+# 1. Update system
+sudo apt update
+
+# 2. Install Python & pip
+sudo apt install python3 python3-pip
+
+# 3. Install GUI dependencies (for pyautogui)
+sudo apt install python3-tk python3-dev scrot
+
+# 4. Download & extract the ZIP
+
+# 5. Install Python packages
+pip3 install pyautogui keyboard colorama
+
+# 6. Run
+python3 main.py
+```
+🎮 How to Use (Step-by-Step)
+
+Open Snapchat in your browser → web.snapchat.com
+Log in and go to the camera screen
+Run SnapchatBoost
+Choose "3) Configure Positions"
+
+Move mouse to Camera button → press Y
+Move to "Send To" → press Y
+Move to your Shortcut → press Y
+Move to "Select All" → press Y
+
+
+Go back to menu → "1) Start"
+Press ESC anytime to stop
