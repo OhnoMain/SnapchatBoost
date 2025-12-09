@@ -108,4 +108,4 @@ Move to "Select All" → press Y
 Go back to menu → "1) Start"
 Press ESC anytime to stop
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=OhnoMain&hide=contribs,prs)
+
