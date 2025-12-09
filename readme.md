@@ -107,4 +107,5 @@ Move to "Select All" → press Y
 
 Go back to menu → "1) Start"
 Press ESC anytime to stop
-[![GitHub Streak](https://streak-stats.demolab.com/?user=OhnoMain)](https://git.io/streak-stats)
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=OhnoMain&hide=contribs,prs)
