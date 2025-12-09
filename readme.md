@@ -107,3 +107,4 @@ Move to "Select All" → press Y
 
 Go back to menu → "1) Start"
 Press ESC anytime to stop
+[![GitHub Streak](https://streak-stats.demolab.com/?user=DenverCoder1)](https://git.io/streak-stats)
