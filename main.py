@@ -42,7 +42,7 @@ SNAP_W = Fore.WHITE
 # ----------------------------------------------------------------------
 # Version handling
 # ----------------------------------------------------------------------
-VERSION = "1.0.1"  # <-- update on every release
+VERSION = "1.0.2"  
 VERSION_URL = "https://raw.githubusercontent.com/OhnoMain/SnapchatBoost/main/version.txt"
 RELEASES_URL = "https://github.com/OhnoMain/SnapchatBoost/releases"
 
