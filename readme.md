@@ -4,7 +4,7 @@
 
 > **Automate Snapchat snap sending on `web.snapchat.com`** — **fast, simple, and fully anonymous**.  
 > Built with **Python + GUI automation** (`pyautogui`) for educational and productivity testing.  
-> Created by **Ohno** — **Anonymous Mode Edition**
+> Created by **Ohno** 
 
 ---
 
@@ -12,27 +12,9 @@
 
 `SnapchatBoost` lets you **send hundreds of snaps in seconds** using **Snapchat Web** — no app, no phone, no limits.
 
-It simulates real clicks and movements on your screen to:
-- Open camera
-- Select your shortcut
-- Hit **“Send To”** → **Select All** → **Send**
-
-Perfect for **testing**, **boosting streaks**, or **productivity experiments**.
+Perfect for **testing**, **boosting streaks**, or any **random experiments**.
 
 ---
-
-## ⚡ **Features**
-
-| Feature | Description |
-|--------|-------------|
-| **Mouse Position Mapping** | Point & press `Y` to save button locations |
-| **Custom Delays** | Fine-tune speed to avoid detection |
-| **Shortcut Support** | Send to **1–100+ friends at once** |
-| **Time Estimator** | Know exactly how long 10K snaps will take |
-| **Colorful Terminal UI** | Smooth animations + ASCII boot sequence |
-| **Auto-Help** | Opens README + Snapchat Web on first run |
-| **Cross-Platform** | Works on **Windows**, **macOS**, **Linux** |
-
 ---
 
 ## 🚀 **Installation (Super Simple)**
