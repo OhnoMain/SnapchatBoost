@@ -17,7 +17,7 @@ Perfect for **testing**, **boosting streaks**, or any **random experiments**.
 ---
 ---
 
-## 🚀 **Installation (Super Simple)**
+## 🚀 **Installation (if stuck dm me on discord)**
 
 > **No coding required** — just **download, run, and go!**
 
@@ -33,7 +33,7 @@ Perfect for **testing**, **boosting streaks**, or any **random experiments**.
 
 4. **Run `start.bat`** to launch SnapchatBoost
 
-> **Done!** The banner appears → you're ready.
+> **Done!** 
 
 ---
 
@@ -74,11 +74,11 @@ pip3 install pyautogui keyboard colorama
 # 6. Run
 python3 main.py
 ```
-🎮 How to Use (Step-by-Step)
+🎮 How to actually use it
 
-Open Snapchat in your browser → web.snapchat.com
+**Open** Snapchat in your browser → **snapchat.com/web**
 Log in and go to the camera screen
-Run SnapchatBoost
+Run main.py/start.bat
 Choose "3) Configure Positions"
 
 Move mouse to Camera button → press Y
