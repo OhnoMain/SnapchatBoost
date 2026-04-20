@@ -42,7 +42,7 @@ SNAP_W = Fore.WHITE
 # ----------------------------------------------------------------------
 # Version handling
 # ----------------------------------------------------------------------
-VERSION = "1.0.2"  
+VERSION = "1.0.3"  
 VERSION_URL = "https://raw.githubusercontent.com/OhnoMain/SnapchatBoost/main/version.txt"
 RELEASES_URL = "https://github.com/OhnoMain/SnapchatBoost/releases"
 
@@ -377,6 +377,7 @@ def exit_screen():
         "╔════════════════════════════════════════════════╗\n"
         "║ Thank you for using SnapchatBoost! ║\n"
         f"║ https://github.com/OhnoMain/SnapchatBoost ║\n"
+        "║ https://discord.com/users/1486806826946134239 ║\n"
         "╚════════════════════════════════════════════════╝\n"
     )
     print(SNAP_Y + box + Style.RESET_ALL)
