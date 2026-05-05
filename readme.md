@@ -85,12 +85,11 @@ Move mouse to Camera button → press Y
 Move to "Send To" → press Y
 Move to your Shortcut → press Y
 Move to "Select All" → press Y
+Go back to menu → "1) Start"
+Press ESC anytime to stop
 <br>
 <h1>Discord:</h1>
 <br>
 https://discord.gg/FKXR3TkQnt
-
-Go back to menu → "1) Start"
-Press ESC anytime to stop
 
 
