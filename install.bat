@@ -3,8 +3,8 @@ title Python 3.10 Installer (No Admin)
 color 0a
 
 echo ============================================
-echo   Python 3.10 Auto Installer (No Admin)
-echo   Installs pip + dependencies + runs main.py
+echo   Python 3.10 Auto Installer 
+echo   Installs pip + dependencies + python 
 echo ============================================
 echo.
 
