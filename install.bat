@@ -8,7 +8,7 @@ echo   Installs pip + dependencies + runs main.py
 echo ============================================
 echo.
 
-set PYTHON_URL=https://www.python.org/ftp/python/3.10.13/python-3.10.13-amd64.exe
+set PYTHON_URL=https://www.python.org/ftp/python/3.10.3/python-3.10.3-amd64.exe
 set PYTHON_PATH=%USERPROFILE%\AppData\Local\Programs\Python310
 set INSTALLER=%TEMP%\python310_installer.exe
 
