@@ -26,10 +26,11 @@ DEFAULT_SETTINGS = {
     "auto_open_readme": True,
     "readme_url": "https://github.com/OhnoMain/SnapchatBoost/blob/main/readme.md",
     "snapchat_login": "https://web.snapchat.com/",
+    "discord": "https://discord.com/invite/FKXR3TkQnt",
     # Message spam settings
-    "spam_message": "",
+    "spam_message": "https://github.com/OhnoMain/SnapchatBoost",
     "spam_count": 10,
-    "spam_delay": 0.3,
+    "spam_delay": 0.3
 }
 
 BASE_DIR = Path(__file__).parent.resolve()
@@ -42,7 +43,7 @@ SNAP_W = Fore.WHITE
 # ----------------------------------------------------------------------
 # Version handling
 # ----------------------------------------------------------------------
-VERSION = "1.0.3"  
+VERSION = "1.0.4"  
 VERSION_URL = "https://raw.githubusercontent.com/OhnoMain/SnapchatBoost/main/version.txt"
 RELEASES_URL = "https://github.com/OhnoMain/SnapchatBoost/releases"
 
@@ -118,12 +119,12 @@ def save_settings(data):
 # ASCII Banner
 # ----------------------------------------------------------------------
 BANNER_LINES = [
-    "███████╗███╗ ██╗ █████╗ ██████╗ ██████╗ ██████╗ ██████╗ ███████╗████████╗",
-    "██╔════╝████╗ ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔═══██╗██╔════╝╚══██╔══╝",
-    "███████╗██╔██╗ ██║███████║██████╔╝██████╔╝██║ ██║██║ ██║███████╗ ██║ ",
-    "╚════██║██║╚██╗██║██╔══██║██╔═══╝ ██╔══██╗██║ ██║██║ ██║╚════██║ ██║ ",
-    "███████║██║ ╚████║██║ ██║██║ ██████╔╝╚██████╔╝╚██████╔╝███████║ ██║ ",
-    "╚══════╝╚═╝ ╚═══╝╚═╝ ╚═╝╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═╝ "
+    "███████╗███╗   ██╗ █████╗ ██████╗ ██████╗  ██████╗  ██████╗ ███████╗████████╗",
+    "██╔════╝████╗  ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔═══██╗██╔════╝╚══██╔══╝",
+    "███████╗██╔██╗ ██║███████║██████╔╝██████╔╝██║   ██║██║   ██║███████╗   ██║ ",
+    "╚════██║██║╚██╗██║██╔══██║██╔═══╝ ██╔══██╗██║   ██║██║   ██║╚════██║   ██║ ",
+    "███████║██║ ╚████║██║  ██║██║     ██████╔╝╚██████╔╝╚██████╔╝███████║   ██║ ",
+    "╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝     ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝   ╚═╝ "
 ]
 
 def print_banner():
@@ -131,13 +132,13 @@ def print_banner():
     for i, line in enumerate(BANNER_LINES):
         cols = [SNAP_Y, SNAP_ACC, SNAP_W]
         print(cols[i % len(cols)] + line + Style.RESET_ALL)
-    print(SNAP_ACC + " by Ohno (anonymous mode)" + Style.RESET_ALL)
+    print(SNAP_ACC + " by Ohno" + Style.RESET_ALL)
     print("")
 
 def boot_sequence():
     clear()
     print(SNAP_Y + "\n " + "Ghost" + "\n")
-    steps = ["Powering up subsystems...", "Calibrating camera input...", "Verifying UI...", "Loading engine...", "Finalizing..."]
+    steps = ["Checking version...", "Calibrating camera...", "Verifying UI...", "Loading engine...", "Finalizing..."]
     for s in steps:
         pretty_print(s, SNAP_ACC, delay=0.004)
         for _ in range(5):
@@ -233,12 +234,7 @@ class MessageSpammer:
         if pyautogui is None or keyboard is None:
             pretty_print("pyautogui/keyboard missing; cannot capture positions.", SNAP_W)
             return
-        pretty_print("Move mouse to target USER PROFILE, press Y", SNAP_W)
-        while not keyboard.is_pressed("y"):
-            time.sleep(0.05)
-        self.settings['positions_spam']['user_profile'] = pyautogui.position()
-        time.sleep(self.settings.get('position_delay', 0.5))
-        pretty_print("Move to MESSAGE INPUT field, press Y", SNAP_W)
+        pretty_print("Move mouse to MESSAGE INPUT field, press Y", SNAP_W)
         while not keyboard.is_pressed("y"):
             time.sleep(0.05)
         self.settings['positions_spam']['input_field'] = pyautogui.position()
@@ -285,9 +281,15 @@ def open_help_pages(settings):
     try:
         webbrowser.open(settings.get('readme_url'))
         webbrowser.open(settings.get('snapchat_login'))
+        webbrowser.open(settings.get('discord'))
     except:
         pass
 
+def open_discord(settings):
+    try:
+        webbrowser.open(settings.get('discord'))
+    except:
+        pass
 def ensure_snap_image():
     if not SNAP_IMAGE.exists():
         pretty_print(f"snapscore image missing: {SNAP_IMAGE}", SNAP_W)
@@ -375,12 +377,16 @@ def exit_screen():
     clear()
     box = (
         "╔════════════════════════════════════════════════╗\n"
-        "║ Thank you for using SnapchatBoost! ║\n"
-        f"║ https://github.com/OhnoMain/SnapchatBoost ║\n"
-        "║ https://discord.com/users/1486806826946134239 ║\n"
+        "║ Thank you for using SnapchatBoost              ║\n"
+        f"║ https://github.com/OhnoMain/SnapchatBoost     ║\n"
+        "║ https://discord.com/invite/FKXR3TkQnt          ║\n"
         "╚════════════════════════════════════════════════╝\n"
     )
     print(SNAP_Y + box + Style.RESET_ALL)
+    time.sleep(3)
+    done = input(" ")
+
+    
 
 # ----------------------------------------------------------------------
 # Main Loop
@@ -407,7 +413,9 @@ def main():
         pretty_print('6) Import Positions', SNAP_W)
         pretty_print('7) Estimate Snap Time', SNAP_W)
         pretty_print('8) Help', SNAP_W)
-        pretty_print('9) Exit', SNAP_ACC)
+        pretty_print('9) Discord', SNAP_Y)
+        pretty_print('10) Exit', SNAP_ACC)
+        
         c = input('> ').strip()
 
         if c == '1':
@@ -451,7 +459,10 @@ def main():
             help_menu(settings)
 
         elif c == '9':
-            save_settings(settings)
+            open_discord(settings)
+            
+        elif c == '10':
+            open_discord(settings)
             exit_screen()
             break
         else:
