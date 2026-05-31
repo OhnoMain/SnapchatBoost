@@ -36,7 +36,25 @@ Perfect for **testing**, **boosting streaks**, or any **random experiments**.
 > **Done!** 
 
 ---
+### **Windows**
+```bash
+# 1. Check Python is installed
+python --version
 
+# 2. If it isnt installed install python from and select "add to path" (donwload python 3.13.10)
+# https://www.python.org/downloads/release/python-31310/
+
+# 3. Open Command Prompt or PowerShell in the project folder
+
+# 4. Install Python packages
+pip install pyautogui keyboard colorama
+
+# Optional: If pyautogui complains about screenshots
+pip install pillow
+
+# 5. Run the program
+python main.py
+```
 ### **macOS**
 
 ```bash
