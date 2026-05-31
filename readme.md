@@ -7,7 +7,7 @@
 > Created by **Ohno** 
 
 ---
-
+https://youtu.be/S9z3nU8IOVY
 ## 🌟 **What It Does**
 
 `SnapchatBoost` lets you **send hundreds of snaps in seconds** using **Snapchat Web** — no app, no phone, no limits.
@@ -106,8 +106,13 @@ Move to "Select All" → press Y
 Go back to menu → "1) Start"
 Press ESC anytime to stop
 <br>
+<h1>Installation Help:</h1>
+<br>
+https://youtu.be/S9z3nU8IOVY
+<br>
 <h1>Discord:</h1>
 <br>
 https://discord.gg/FKXR3TkQnt
+
 
 
