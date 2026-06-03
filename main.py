@@ -26,7 +26,7 @@ DEFAULT_SETTINGS = {
     "auto_open_readme": True,
     "readme_url": "https://github.com/OhnoMain/SnapchatBoost/blob/main/readme.md",
     "snapchat_login": "https://web.snapchat.com/",
-    "discord": "https://discord.com/invite/FKXR3TkQnt",
+    "discord": "https://discord.gg/RqQxXbFT9a",
     # Message spam settings
     "spam_message": "https://github.com/OhnoMain/SnapchatBoost",
     "spam_count": 10,
