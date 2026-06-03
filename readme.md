@@ -112,7 +112,7 @@ https://youtu.be/S9z3nU8IOVY
 <br>
 <h1>Discord:</h1>
 <br>
-https://discord.gg/FKXR3TkQnt
+https://discord.gg/RqQxXbFT9a
 
 
 
