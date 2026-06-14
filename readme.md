@@ -2,8 +2,8 @@
 
 ![SnapchatBoost Banner](https://github.com/user-attachments/assets/e632e18e-586d-48e4-b535-a830b5ac1405)
 
-> **Automate Snapchat snap sending on `web.snapchat.com`** — **fast, simple, and fully anonymous**.  
-> Built with **Python + GUI automation** (`pyautogui`) for educational and productivity testing.  
+> **Fastes and simplest way to increase your snapstreak `web.snapchat.com`** — this tool is **fast, simple, and fully anonymous**.  
+> Built with **Python** for educational purposes only.  
 > Created by **Ohno** 
 
 ---
