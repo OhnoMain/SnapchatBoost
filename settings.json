@@ -3,8 +3,57 @@
   "click_delay": 0.29,
   "position_delay": 0.5,
   "shortcut_count": 1,
-  "positions": {},
+  "positions": {
+    "switch_to_camera": [
+      1005,
+      885
+    ],
+    "send_to": [
+      1208,
+      935
+    ],
+    "shortcut": [
+      883,
+      198
+    ],
+    "select_all": [
+      1203,
+      234
+    ]
+  },
+  "positions_spam": {
+    "user_profile": [
+      523,
+      1028
+    ],
+    "input_field": [
+      552,
+      1025
+    ],
+    "send_button": [
+      1787,
+      1033
+    ]
+  },
   "auto_open_readme": true,
   "readme_url": "https://github.com/OhnoMain/SnapchatBoost/blob/main/readme.md",
-  "snapchat_login": "https://web.snapchat.com/"
+  "snapchat_login": "https://web.snapchat.com/",
+  "discord": "https://discord.com/invite/FKXR3TkQnt",
+  "spam_message": "https://github.com/OhnoMain/SnapchatBoost/",
+  "spam_count": 10,
+  "spam_delay": 0.3,
+  "positions_open": {
+    "snap": [
+      144,
+      404
+    ],
+    "open_first_snap": [
+      345,
+      469
+    ],
+    "open_button": [
+      1415,
+      569
+    ]
+  }
 }
