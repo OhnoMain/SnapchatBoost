@@ -24,11 +24,11 @@ DEFAULT_SETTINGS = {
     "positions": {},
     "positions_spam": {},  # <-- ADD THIS LINE
     "auto_open_readme": True,
-    "readme_url": "https://github.com/OhnoMain/SnapchatBoost/blob/main/readme.md",
+    "readme_url": "https://github.com/OhnoMain/SnapchatBoost/",
     "snapchat_login": "https://web.snapchat.com/",
-    "discord": "https://discord.gg/RqQxXbFT9a",
+    "discord": "https://discord.com/invite/FKXR3TkQnt",
     # Message spam settings
-    "spam_message": "https://github.com/OhnoMain/SnapchatBoost",
+    "spam_message": "https://github.com/OhnoMain/SnapchatBoost/",
     "spam_count": 10,
     "spam_delay": 0.3
 }
@@ -43,9 +43,9 @@ SNAP_W = Fore.WHITE
 # ----------------------------------------------------------------------
 # Version handling
 # ----------------------------------------------------------------------
-VERSION = "1.1.0"  
+VERSION = "1.2.1"  
 VERSION_URL = "https://raw.githubusercontent.com/OhnoMain/SnapchatBoost/main/version.txt"
-RELEASES_URL = "https://github.com/OhnoMain/SnapchatBoost/releases"
+RELEASES_URL = "https://github.com/OhnoMain/SnapchatBoost/"
 
 def check_version():
     """Force update if version mismatch. Exit on outdated version."""
@@ -273,7 +273,82 @@ class MessageSpammer:
             now = time.time()
             pretty_print(f"Sent message #{self.sent_messages}/{count}. Elapsed {int(now - started_time)}s")
             time.sleep(delay)
+            # ----------------------------------------------------------------------
+            # Snap Opener Class
+            # ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+# Snap Opener Class
+# ----------------------------------------------------------------------
+class SnapOpener:
+    def __init__(self, settings):
+        self.settings = settings
 
+    def get_open_positions(self):
+        if pyautogui is None or keyboard is None:
+            pretty_print("pyautogui/keyboard missing.", SNAP_W)
+            return
+
+        self.settings.setdefault("positions_open", {})
+
+        pretty_print("Move mouse over FIRST SNAP to open, press Y", SNAP_W)
+
+        while not keyboard.is_pressed("y"):
+            time.sleep(0.05)
+
+        self.settings["positions_open"]["open_first_snap"] = pyautogui.position()
+
+        time.sleep(self.settings.get("position_delay", 0.5))
+
+
+        pretty_print("Move mouse over OPEN BUTTON/AREA to spam click, press Y", SNAP_W)
+
+        while not keyboard.is_pressed("y"):
+            time.sleep(0.05)
+
+        self.settings["positions_open"]["open_button"] = pyautogui.position()
+
+        time.sleep(self.settings.get("position_delay", 0.5))
+
+
+    def open_snaps(self):
+
+        pos = self.settings.get("positions_open", {})
+
+        required = [
+            "open_first_snap",
+            "open_button"
+        ]
+
+        if not all(x in pos for x in required):
+            pretty_print("Open snap positions missing. Configure first.", SNAP_W)
+            return
+
+
+        pretty_print("Opening first snap...", SNAP_Y)
+
+        # Open first snap once
+        pyautogui.click(pos["open_first_snap"])
+
+        time.sleep(self.settings.get("click_delay", 0.29))
+
+
+        pretty_print("Starting Snap Opener. ESC to stop.", SNAP_Y)
+
+
+        while True:
+            try:
+                if keyboard and keyboard.is_pressed("esc"):
+                    pretty_print("Stopping.", SNAP_ACC)
+                    break
+
+            except:
+                pass
+
+
+            # spam click open button
+            pyautogui.click(pos["open_button"])
+
+            time.sleep(self.settings.get("click_delay", 0.29))        
 # ----------------------------------------------------------------------
 # Menu Functions
 # ----------------------------------------------------------------------
@@ -333,6 +408,13 @@ def configure_spam_positions(settings):
     pretty_print('Saved spam positions.', SNAP_ACC)
     input('ENTER')
 
+def configure_open_positions(settings):
+    opener = SnapOpener(settings)
+    opener.get_open_positions()
+    save_settings(settings)
+    pretty_print("Saved open snap positions.", SNAP_ACC)
+    input("ENTER")
+    
 def import_positions(settings):
     path = input("Enter full path to settings.json (or blank): ").strip()
     if not path:
@@ -345,6 +427,8 @@ def import_positions(settings):
         data = json.load(fh)
     if 'positions' in data:
         settings['positions'] = data['positions']
+    if 'positions_open' in data:
+        settings['positions_open'] = data['positions_open']
     if 'positions_spam' in data:
         settings['positions_spam'] = data['positions_spam']
     save_settings(settings)
@@ -407,14 +491,16 @@ def main():
         print_banner()
         pretty_print('1) Start Snap Boost', SNAP_Y)
         pretty_print('2) Start Message Spam', SNAP_Y)
-        pretty_print('3) Settings', SNAP_W)
-        pretty_print('4) Configure Snap Positions', SNAP_W)
-        pretty_print('5) Configure Spam Positions', SNAP_W)
-        pretty_print('6) Import Positions', SNAP_W)
-        pretty_print('7) Estimate Snap Time', SNAP_W)
-        pretty_print('8) Help', SNAP_W)
-        pretty_print('9) Discord', SNAP_Y)
-        pretty_print('10) Exit', SNAP_ACC)
+        pretty_print('3) Open Snaps', SNAP_Y)
+        pretty_print('4) Settings', SNAP_W)
+        pretty_print('5) Configure Snap Positions', SNAP_W)
+        pretty_print('6) Configure Spam Positions', SNAP_W)
+        pretty_print('7) Configure Open Snap Position', SNAP_W)
+        pretty_print('8) Import Positions', SNAP_W)
+        pretty_print('9) Estimate Snap Time', SNAP_W)
+        pretty_print('10) Help', SNAP_W)
+        pretty_print('11) Discord', SNAP_Y)
+        pretty_print('12) Exit', SNAP_ACC)
         
         c = input('> ').strip()
 
@@ -441,27 +527,40 @@ def main():
             save_settings(settings)
 
         elif c == '3':
-            settings_menu(settings)
+            opener = SnapOpener(settings)
+            opener.open_snaps()
+            
 
         elif c == '4':
-            configure_positions(settings)
+            settings_menu(settings)
+            
 
         elif c == '5':
-            configure_spam_positions(settings)
+            configure_positions(settings)
+            
 
         elif c == '6':
-            import_positions(settings)
+            configure_spam_positions(settings)
+            
 
         elif c == '7':
-            estimate_menu(settings)
+            configure_open_positions(settings)
 
         elif c == '8':
-            help_menu(settings)
+            import_positions(settings)
+            
 
         elif c == '9':
-            open_discord(settings)
+            estimate_menu(settings)
+            
             
         elif c == '10':
+            help_menu(settings)
+
+        elif c == '11':
+            open_discord(settings)
+            
+        elif c == '12':
             open_discord(settings)
             exit_screen()
             break
@@ -470,3 +569,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
