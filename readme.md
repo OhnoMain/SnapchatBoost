@@ -2,7 +2,7 @@
 
 ![SnapchatBoost Banner](https://github.com/user-attachments/assets/e632e18e-586d-48e4-b535-a830b5ac1405)
 
-> **Fastes and simplest way to increase your snapstreak `web.snapchat.com`** — this tool is **fast, simple, and fully anonymous**.  
+> **Fastest and simplest way to increase your snapscore `web.snapchat.com`** — this tool is **fast, simple, and fully anonymous**.  
 > Built with **Python** for educational purposes only.  
 > Created by **Ohno** 
 
@@ -10,7 +10,7 @@
 https://youtu.be/S9z3nU8IOVY
 ## 🌟 **What It Does**
 
-`SnapchatBoost` lets you **send hundreds of snaps in seconds** using **Snapchat Web** — no app, no phone, no limits.
+`SnapchatBoost` lets you **send hundreds of snaps in seconds** using **Snapchat Web**
 
 Perfect for **testing**, **boosting streaks**, or any **random experiments**.
 
